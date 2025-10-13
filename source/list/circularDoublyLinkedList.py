@@ -60,7 +60,7 @@ class CircularDoublyLinkedList:
 		# 인덱스 i 결정
 		if len(args) != 0:   # pop(k)과 같이 인자가 있으면 i = k 할당
 			i = args[0]
-		if len(args) == 0 or i == -1::# pop()에 인자가 없거나 pop(-1)이면 i에 맨 끝 인덱스 할당
+		if len(args) == 0 or i == -1: # pop()에 인자가 없거나 pop(-1)이면 i에 맨 끝 인덱스 할당
 			i = self.__numItems - 1
 		# i번 원소 리턴
 		if (i >= 0 and i <= self.__numItems - 1):
@@ -141,8 +141,8 @@ class CircularDoublyLinkedList:
 		for element in self:
 			print(element, end = ' ')
 		print()
- 
- def __iter__(self):  # generating iterator and return
+ 	
+	def __iter__(self):  # generating iterator and return
 		return CircularDoublyLinkedListIterator(self)
  
 class CircularDoublyLinkedListIterator:
